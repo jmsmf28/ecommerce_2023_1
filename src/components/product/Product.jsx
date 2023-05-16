@@ -15,7 +15,7 @@ export const Product = () => {
     setTest(productFromState)
   }  
   ,[productFromState])
-
+  
   return (
     <>
       <section className='product'>
