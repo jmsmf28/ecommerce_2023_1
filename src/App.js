@@ -5,7 +5,8 @@ import { Header } from "./components/header/Header"
 import { Account } from "./pages/account/Account"
 import { Home } from "./pages/home/Home"
 import { Login } from "./pages/login/Login"
-import { Regsiter } from "./pages/login/Regsiter"
+import { DetailsPages } from "./pages/details/DetailsPages"
+import { Register } from "./pages/login/Register"
 import { useSelector } from "react-redux"
 
 const App = () => {
@@ -19,8 +20,9 @@ const App = () => {
           <Header />
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/regsiter' component={Regsiter} />
+            <Route exact path='/register' component={Register} />
             <Route exact path='/account' component={Account} />
+            <Route exact path='/product_details' component={DetailsPages} />
           </Switch>
           <Footer />
         </Router>

@@ -3,7 +3,7 @@ import "./login.css"
 import back from "../../assets/images/my-account.jpg"
 import { Link } from "react-router-dom"
 
-export const Regsiter = () => {
+export const Register = () => {
   return (
     <>
       <section className='login'>
