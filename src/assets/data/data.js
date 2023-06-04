@@ -98,6 +98,7 @@ export const product = [
     qty: 1,
     category: "face & skin care",
     cover: "../images/product/product1.jpg",
+    images:["../images/product/product1.jpg", "../images/product/product2.jpg", "../images/product/product3.jpg","../images/product/product4.jpg","../images/product/product5.png"],
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {

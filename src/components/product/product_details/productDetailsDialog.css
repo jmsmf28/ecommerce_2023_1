@@ -11,8 +11,8 @@
   transform: translateY(-5px);
 }
 .product img {
-  width: 105px;
-  height: 105px;
+  width: 210px;
+  height: 210px;
   object-fit: cover;
   margin-right: 20px;
 }
@@ -29,4 +29,20 @@
   font-size: 25px;
   margin-top: 15px;
   float: right;
+}
+
+.product_details {
+  display:flex
+}
+
+.small_images_container {
+  display: flex;
+  margin-top:10px;
+}
+
+.small_images_container .images {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  margin-right: 15px;
 }

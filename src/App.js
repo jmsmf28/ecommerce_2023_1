@@ -8,26 +8,28 @@ import { Login } from "./pages/login/Login"
 import { DetailsPages } from "./pages/details/DetailsPages"
 import { Register } from "./pages/login/Register"
 import { useSelector } from "react-redux"
+import Shop  from "./pages/shops/Shop"
 
 const App = () => {
-  const isLoggIn = useSelector((state) => state.auth.isLoggIn)
-  const cartItems = useSelector((state) => state.cart.itemsList)
-  console.log(cartItems)
+  /* const isLoggIn = useSelector((state) => state.auth.isLoggIn)
+  const cartItems = useSelector((state) => state.cart.itemsList) */
+
   return (
     <>
-      {isLoggIn && (
+     {/*  {isLoggIn && ( */}
         <Router>
           <Header />
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/register' component={Register} />
             <Route exact path='/account' component={Account} />
+            <Route exact path='/shop' component={Shop} />
             <Route exact path='/product_details' component={DetailsPages} />
           </Switch>
           <Footer />
         </Router>
-      )}
-      {!isLoggIn && <Login />}
+
+{/*       {!isLoggIn && <Login />} */}
     </>
   )
 }
