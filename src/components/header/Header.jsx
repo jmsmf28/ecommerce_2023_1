@@ -9,8 +9,10 @@ import { Link } from "react-router-dom";
 import { product } from "../../assets/data/data"
 import { useDispatch } from 'react-redux';
 import { searchProduct } from '../../store/actions/productActions';
+import { useTranslation } from "react-i18next"
 
 export const Header = () => {
+  const [t] = useTranslation()
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
 
@@ -50,7 +52,7 @@ export const Header = () => {
             <AiOutlineSearch className="searchIcon" />
             <input
               type="text"
-              placeholder="Search..."
+              placeholder={t("MENU.SEARCH")}
               value={value}
               onChange={handleChange}
               onKeyUp={handleKeyUp}

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const authSlice = createSlice({
   name: "auth",
-  initialState: { isLoggIn: false },
+  initialState: { isLoggIn: false, selectedLanguage: 'pt' },
   reducers: {
     login(state) {
       state.isLoggIn = true
@@ -10,6 +10,12 @@ const authSlice = createSlice({
     logout(state) {
       state.isLoggIn = false
     },
+    setLanguage(state, {payload}){
+      return {
+        ...state,
+        selectedLanguage:payload
+      }
+    }
   },
 })
 

@@ -1,0 +1,11 @@
+{
+    "SITE-TITLE":"A minha loja",
+    "MENU": {
+        "SEARCH":"Procura...",
+        "ABOUT": "",
+        "HELP": ""
+    },
+    "CART": {
+        "TITLE": "O seu carrinho"
+    }
+}

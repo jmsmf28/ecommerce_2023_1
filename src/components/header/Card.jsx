@@ -1,11 +1,13 @@
 import React, { useState } from "react"
 import { BiShoppingBag } from "react-icons/bi"
 import { AiOutlineClose } from "react-icons/ai"
-import { product } from "../../assets/data/data"
 import { CartItems } from "./CartItems"
 import { useSelector } from "react-redux"
+import { currencies } from "../../config/config"
+import { useTranslation } from "react-i18next"
 
 export const Card = () => {
+  const [t] = useTranslation()
   const [cardOpen, setCardOpen] = useState(false)
   const closeCard = () => {
     setCardOpen(null)
@@ -31,7 +33,7 @@ export const Card = () => {
 
       <div className={cardOpen ? "cartItem" : "cardhide"}>
         <div className='title flex'>
-          <h2>Shopping Cart</h2>
+          <h2>{t("CART.TITLE")}</h2>
           <button onClick={closeCard}>
             <AiOutlineClose className='icon' />
           </button>
@@ -42,8 +44,8 @@ export const Card = () => {
 
         <div className='checkOut'>
           <button>
-            <span>Priceed To Checkout</span>
-            <label htmlFor=''>${total}</label>
+            <span>To Checkout</span>
+            <label htmlFor=''>{total}{currencies[1]}</label>
           </button>
         </div>
       </div>

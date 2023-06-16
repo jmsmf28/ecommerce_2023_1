@@ -30,6 +30,7 @@ const ProductDetailDialog = ({ product }) => {
         <img src={image} alt={product.name} />
         <div>
         <p>{desc}</p>
+        <br></br>
         <p>{price}€</p>
         </div>
       </div>
